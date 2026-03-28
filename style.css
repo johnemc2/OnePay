@@ -98,43 +98,37 @@ header p {
     display: flex;
     gap: 1rem;
     margin-bottom: 0.5rem;
-    align-items: center; /* Align items vertically */
 }
 
 .search-container {
-    flex-grow: 1; /* Take remaining space */
+    flex: 3;
 }
 
 .filter-container {
+    flex: 1;
+    min-width: 200px;
     display: flex;
     gap: 0.5rem;
-    flex-shrink: 0; /* Prevent shrinking */
 }
 
 .account-select {
-    width: auto; /* Auto width based on content */
-    min-width: 150px; /* Minimum width for usability */
-    padding: 0.5rem 1rem; /* Match button padding mostly */
+    flex: 1;
+    width: auto;
+    padding: 1rem;
     border: 1px solid var(--border-color);
-    border-radius: 0.25rem; /* Match btn border-radius */
-    font-size: 1rem; /* Match btn font size */
+    border-radius: 0.5rem;
+    font-size: 1.1rem;
     box-shadow: 0 1px 2px rgba(0,0,0,0.05);
     background-color: white;
     cursor: pointer;
-    height: 100%; /* Ensure consistent height */
-}
-
-#export-btn {
-    width: 120px; /* Fixed width */
-    white-space: nowrap;
 }
 
 .search-container input {
     width: 100%;
-    padding: 0.5rem 1rem; /* Adjust to match button height roughly */
+    padding: 1rem;
     border: 1px solid var(--border-color);
-    border-radius: 0.25rem; /* Match others */
-    font-size: 1rem;
+    border-radius: 0.5rem;
+    font-size: 1.1rem;
     box-shadow: 0 1px 2px rgba(0,0,0,0.05);
     transition: border-color 0.2s, box-shadow 0.2s;
 }
@@ -177,7 +171,7 @@ th, td {
 
 /* Column Widths */
 th:nth-child(1) { width: 120px; } /* Date - Fixed */
-th:nth-child(2) { width: 160px; } /* Account - Fixed */
+th:nth-child(2) { width: auto; } /* Account - Flexible to accomodate long account names */
 th:nth-child(3) { width: auto; }  /* Description - Flexible & Wrapping */
 th:nth-child(4) { width: 200px; } /* Transaction Type - Fixed */
 th:nth-child(5) { width: 150px; } /* Amount - Fixed */

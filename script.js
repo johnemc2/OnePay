@@ -163,9 +163,9 @@ document.addEventListener('DOMContentLoaded', () => {
     const CONFIG = {
         dateRegex: /^(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)\s\d{1,2}/i,
         amountRegex: /([+\-]\$[\d,]+\.\d{2})/,
-        accountHeaderRegex: /^(Debit|Savings|Spend|OnePay Advance Overdraft)\s+x\d+$/i,
+        accountHeaderRegex: /^(.*)\s+x\d+$/i,
         ignoredPrefixes: [
-            'total', 'debit x', 'savings x', 'spend x', 'direct inquiries to', 'los angeles, ca', 'member fdic',
+            'total', 'debit x', 'savings x', 'direct inquiries to', 'los angeles, ca', 'member fdic',
             'onepay cash banking', 'one finance, inc.', 'transaction history', 'account summary',
             'activity summary', 'beginning balance', 'beg. balance', 'incoming transactions',
             'outgoing transactions', 'ending balance', 'in case of errors or questions'
